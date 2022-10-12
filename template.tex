@@ -29,7 +29,7 @@ $endif$
 %--------------------------------
 $if(lang)$
 \usepackage{polyglossia}
-\setmainlanguage{$lang$}
+\setmainlanguage{polish}
 $endif$
 
 % TYPOGRAPHY
@@ -40,22 +40,22 @@ $endif$
 
 % converts LaTeX specials (quotes, dashes etc.) to Unicode
 \defaultfontfeatures{Mapping=tex-text}
-\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{$mainfont$}
-\setsansfont[Scale=0.9]{$altfont$}
-\setmonofont[Scale=0.8]{$monofont$}
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{$mainfont$}
+%\setsansfont[Scale=0.9]{$altfont$}
+%\setmonofont[Scale=0.8]{$monofont$}
 
 % Set paragraph break
 \setlength{\parskip}{1em}
 
 % Custom ampersand
-\newcommand{\amper}{{\fontspec[Scale=.95]{$mainfont$}\selectfont\itshape\&}}
+%\newcommand{\amper}{{\fontspec[Scale=.95]{$mainfont$}\selectfont\itshape\&}}
 
-$if(mainfont)$
-    \setmainfont{$mainfont$}
-$endif$
-$if(altfont)$
-    \setsansfont{$altfont$}
-$endif$
+%$if(mainfont)$
+%    \setmainfont{$mainfont$}
+%$endif$
+%$if(altfont)$
+%    \setsansfont{$altfont$}
+%$endif$
 
 % Command required by how Pandoc handles the list conversion
 \providecommand{\tightlist}{%
@@ -79,7 +79,7 @@ $endif$
 
 % To display custom date in the example
 $if(customdate)$
-\usepackage[$lang$]{datetime2}
+\usepackage[polish]{datetime2}
 \DTMsavedate{customdate}{$customdate$}
 $endif$
 
@@ -91,7 +91,7 @@ $endif$
 $for(from)$
 \textbullet{} \textsc{$from$}
 $endfor$
-
+\hrule
 \vspace{1em}
 
 \normalsize \sffamily
@@ -113,7 +113,7 @@ $if(subject)$
 $endif$
 
 \vspace{1em}
-
+\justifying
 $body$
 
 \begin{FlushRight}
